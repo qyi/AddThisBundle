@@ -1,0 +1,27 @@
+{
+    "name": "rithis/addthis-bundle",
+    "type": "symfony-bundle",
+    "homepage": "https://github.com/rithis/AddThisBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrey Linko",
+            "email": "andrey.linko@rithis.com"
+        }
+    ],
+    "support": {
+        "email": "support@rithis.com",
+        "issues": "https://github.com/rithis/AddThisBundle/issues",
+        "wiki": "https://github.com/rithis/AddThisBundle/wiki",
+        "source": "https://github.com/rithis/AddThisBundle"
+    },
+    "require": {
+        "symfony/framework-bundle": "2.1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Rithis\\AddThisBundle": ""
+        }
+    },
+    "target-dir": "Rithis/AddThisBundle"
+}

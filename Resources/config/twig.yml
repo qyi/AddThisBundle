@@ -1,0 +1,10 @@
+services:
+    rithis.addthis.twig.addthis_extension:
+        class: Rithis\AddThisBundle\Twig\Extension\AddThisExtension
+        arguments: [ @service_container ]
+        tags:
+            - { name: twig.extension }
+
+    rithis.addthis.helper:
+        class: Rithis\AddThisBundle\Templating\Helper\AddThisHelper
+        arguments: [ @templating ]
