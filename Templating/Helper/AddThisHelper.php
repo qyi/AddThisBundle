@@ -20,7 +20,15 @@ class AddThisHelper extends Helper
 
         return $this->templating->render($name, $parameters + array());
     }
-    
+
+    public function renderButton($service, $parameters = array())
+    {
+        return $this->templating->render('RithisAddThisBundle::button.html.twig', array(
+            'service'       => $service,
+            'parameters'    => $parameters,
+        ));
+    }
+
     public function renderButtons($style = 1)
     {
         $name = is_string($style) ? $style : 'RithisAddThisBundle::style/php/' . $style . '.html.php';

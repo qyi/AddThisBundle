@@ -1,0 +1,9 @@
+{% autoescape false %}
+    <a class="addthis_button_{{ service }} {% if parameters.class %}{{ parameters.class }}{% endif %}"
+        {% for item in ["url", "title", "description"] %}
+            {% if item in parameters|keys %}
+            addthis:{{ item }}="{{ parameters[item] }}"
+            {% endif %}
+        {% endfor %}
+    ></a>
+{% endautoescape %}

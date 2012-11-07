@@ -19,6 +19,7 @@ class AddThisExtension extends Twig_Extension
     {
         return array(
             'addthis'               => new Twig_Function_Method($this, 'renderAddThis'),
+            'addthis_button'        => new Twig_Function_Method($this, 'renderAddThisButton'),
             'addthis_buttons'       => new Twig_Function_Method($this, 'renderAddThisButtons'),
             'addthis_initialize'    => new Twig_Function_Method($this, 'renderAddThisInitialize'),
         );
@@ -27,6 +28,12 @@ class AddThisExtension extends Twig_Extension
     public function renderAddThis()
     {
         return $this->renderAddThisButtons() . "\n" . $this->renderAddThisInitialize();
+    }
+
+    public function renderAddThisButton($service, $parameters = array())
+    {
+        return $this->container->get('rithis.addthis.helper')
+            ->renderButton($service, $parameters);
     }
 
     public function renderAddThisButtons($style = 1)
